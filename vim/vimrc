@@ -1,0 +1,42 @@
+"""""""""""""""""""""""""""""""""""""""
+" Vundle settings.
+"""""""""""""""""""""""""""""""""""""""
+
+" Make sure that vim is not attempting to retain compatibility with
+" vi, its predecessor. This is a vundle requirement. When vim attempts
+" to be compatible, it disables most of the features that make it
+" worth using over vi
+set nocompatible
+
+" Turn off the default filetype controls for now because the way that
+" vim caches filetype rules at runtime interferes with the way that
+" vundle alters the runtime environment
+filetype off
+
+" Adjust vim's runtime path to include the vundle location.
+set rtp+=~/.vim/bundle/vundle
+
+" Call the vundle initialization function.
+call vundle#begin()
+
+" Let Vundle manage itself. For GitHub repos, you specify plugins
+" using the 'user/repository' format
+Plugin 'gmarik/vundle'
+
+" GNU global plugin.
+Plugin 'gtags.vim'
+
+" Customized file type plugin files.
+Plugin 'jieyu/ftplugin.vim'
+
+call vundle#end()
+
+" Re-establish the filetype functionality.
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""
+" Additional Vim settings.
+"""""""""""""""""""""""""""""""""""""""
+
+syntax on
+set ruler
