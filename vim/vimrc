@@ -26,6 +26,9 @@ Plugin 'gmarik/vundle'
 " GNU global plugin.
 Plugin 'gtags.vim'
 
+" The NERD Tree.
+Plugin 'scrooloose/nerdtree.git'
+
 " Customized file type plugin files.
 Plugin 'jieyu/ftplugin.vim'
 
