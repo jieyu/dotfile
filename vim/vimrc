@@ -35,11 +35,22 @@ Plugin 'jieyu/ftplugin.vim'
 call vundle#end()
 
 " Re-establish the filetype functionality.
-filetype plugin indent on
+filetype on             " Enables filetype detection.
+filetype indent on      " Enables filetype-specific indenting.
+filetype plugin on      " Enables filetype-specific plugins.
 
 """""""""""""""""""""""""""""""""""""""
 " Additional Vim settings.
 """""""""""""""""""""""""""""""""""""""
 
-syntax on
-set ruler
+" Display related.
+syntax on               " Enables syntax highlighting.
+set ruler               " Shows the current line number on the bar.
+set number              " Shows line numbers on the left side.
+set textwidth=70        " Maximum number of chars allowed each line.
+
+" Tab related.
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set noexpandtab
