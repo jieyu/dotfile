@@ -29,6 +29,9 @@ Plugin 'gtags.vim'
 " The NERD Tree.
 Plugin 'scrooloose/nerdtree.git'
 
+" A git wrapper.
+Plugin 'tpope/vim-fugitive'
+
 " Customized file type plugin files.
 Plugin 'jieyu/ftplugin.vim'
 
