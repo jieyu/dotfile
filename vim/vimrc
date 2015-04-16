@@ -32,6 +32,12 @@ Plugin 'scrooloose/nerdtree.git'
 " A git wrapper.
 Plugin 'tpope/vim-fugitive'
 
+" Pig syntax highlighting.
+Plugin 'motus/pig.vim'
+
+" Go (golang) support.
+Plugin 'fatih/vim-go'
+
 " Customized file type plugin files.
 Plugin 'jieyu/ftplugin.vim'
 
