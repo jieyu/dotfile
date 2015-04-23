@@ -38,6 +38,9 @@ Plugin 'motus/pig.vim'
 " Go (golang) support.
 Plugin 'fatih/vim-go'
 
+" Scala support.
+Plugin 'derekwyatt/vim-scala'
+
 " Customized file type plugin files.
 Plugin 'jieyu/ftplugin.vim'
 
