@@ -25,7 +25,7 @@ if [ $BASE = "." ]; then
 fi
 
 
-set -eux -o pipefail
+set -eux
 
 
 # Configure tmux.
