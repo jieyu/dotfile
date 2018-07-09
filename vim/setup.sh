@@ -42,9 +42,8 @@ fi
 set -eux 
 
 
-# Install and configure Vundle.
+# Install and configure Vim plug.
 rm -f ~/.vimrc
 rm -rf ~/.vim
-git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp $BASE/vimrc ~/.vimrc
-vim +PluginInstall +qall
