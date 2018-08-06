@@ -16,6 +16,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'itchyny/lightline.vim'
 Plug 'jieyu/ftplugin.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gtags.vim'
@@ -49,3 +50,8 @@ imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
 map :gt :Gtags
 map <C-f> :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
+
+" Status line.
+if !has('gui_running')
+  set t_Co=256
+endif
