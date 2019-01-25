@@ -55,3 +55,6 @@ map <C-o> :NERDTreeToggle<CR>
 if !has('gui_running')
   set t_Co=256
 endif
+
+" Workaround Nerdtree bug.
+let g:NERDTreeNodeDelimiter = "\u00a0"
