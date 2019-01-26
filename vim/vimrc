@@ -20,6 +20,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gtags.vim'
+Plug 'hashivim/vim-hashicorp-tools'
 
 " Command-line fuzzy finder.
 Plug '/usr/local/opt/fzf'
