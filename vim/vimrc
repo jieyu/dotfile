@@ -21,6 +21,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gtags.vim'
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Command-line fuzzy finder.
 Plug '/usr/local/opt/fzf'
@@ -59,3 +60,6 @@ endif
 
 " Workaround Nerdtree bug.
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" Vim-go Settings.
+let g:go_def_mode = 'godef'
