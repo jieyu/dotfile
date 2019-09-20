@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""
+
 " vim-plug settings.
 """""""""""""""""""""""""""""""""""""""
 
@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/gtags.vim'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'flazz/vim-colorschemes'
 
 " Command-line fuzzy finder.
 Plug '/usr/local/opt/fzf'
@@ -38,6 +39,9 @@ syntax on               " Enables syntax highlighting.
 set ruler               " Shows the current line number on the bar.
 set number              " Shows line numbers on the left side.
 set textwidth=70        " Maximum number of chars allowed each line.
+
+" Color scheme.
+colorscheme molokai
 
 " Tab related.
 set shiftwidth=2
@@ -63,3 +67,7 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Vim-go Settings.
 let g:go_def_mode = 'godef'
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
