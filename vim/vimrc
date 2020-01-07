@@ -34,6 +34,9 @@ call plug#end()
 " Additional Vim settings.
 """""""""""""""""""""""""""""""""""""""
 
+" More powerful backspacing.
+set backspace=indent,eol,start
+
 " Display related.
 syntax on               " Enables syntax highlighting.
 set ruler               " Shows the current line number on the bar.
