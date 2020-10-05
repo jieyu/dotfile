@@ -4,10 +4,8 @@
 
 " Automatic installation.
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -34,14 +32,31 @@ call plug#end()
 " Additional Vim settings.
 """""""""""""""""""""""""""""""""""""""
 
-" More powerful backspacing.
-set backspace=indent,eol,start
+" General settings.
+syntax on
+colorscheme molokai
 
-" Display related.
-syntax on               " Enables syntax highlighting.
-set ruler               " Shows the current line number on the bar.
-set number              " Shows line numbers on the left side.
-set textwidth=70        " Maximum number of chars allowed each line.
+set ruler                       " Shows the current line number on the bar.
+set number                      " Shows line numbers on the left side.
+set modeline                    " Allow file-embedded modelines
+set tabstop=2                   " Tab width
+set softtabstop=2               " Soft tab width
+set shiftwidth=2                " How much to shift text
+set textwidth=72                " Default text width
+set expandtab                   " Expland tab using spaces
+set hlsearch                    " Highlight search terms
+set cursorline                  " Highlight the current line
+set showcmd                     " Show last command
+set list                        " Show listchars
+set listchars=tab:>.,trail:_    " Render tabs and trailing spaces
+set backspace=indent,eol,start  " Makes backspace key more powerful
+set completeopt=menuone         " Show insertion menu for completions
+set visualbell                  " Enable vim's internal visual bell
+set t_vb=                       " Set the effect of the vim visual bell to do nothing
+set ttyfast                     " Indicate fast terminal conn for faster redraw
+set lazyredraw                  " Buffer screen updates instead of updating all the time
+set autowrite                   " Automatically save before :next, :make etc.
+set maxmempattern=2000          " Let plugins use more memory for things like syntax
 
 " Color scheme.
 colorscheme molokai
@@ -50,7 +65,6 @@ colorscheme molokai
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set expandtab
 
 " Clang format.
 map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
@@ -60,17 +74,21 @@ map :gt :Gtags
 map <C-f> :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
 
-" Status line.
-if !has('gui_running')
-  set t_Co=256
-endif
-
 " Workaround Nerdtree bug.
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Vim-go Settings.
 let g:go_def_mode = 'godef'
 let g:go_fmt_command = "goimports"
-let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_types = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_types = 1
