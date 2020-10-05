@@ -12,7 +12,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'derekwyatt/vim-scala'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jieyu/ftplugin.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'scrooloose/nerdtree'
@@ -53,18 +54,11 @@ set backspace=indent,eol,start  " Makes backspace key more powerful
 set completeopt=menuone         " Show insertion menu for completions
 set visualbell                  " Enable vim's internal visual bell
 set t_vb=                       " Set the effect of the vim visual bell to do nothing
+set clipboard^=unnamed          " Allow copying between multiple vim processes
 set ttyfast                     " Indicate fast terminal conn for faster redraw
 set lazyredraw                  " Buffer screen updates instead of updating all the time
 set autowrite                   " Automatically save before :next, :make etc.
 set maxmempattern=2000          " Let plugins use more memory for things like syntax
-
-" Color scheme.
-colorscheme molokai
-
-" Tab related.
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
 
 " Clang format.
 map <C-K> :pyf /usr/local/share/clang/clang-format.py<cr>
@@ -73,6 +67,12 @@ imap <C-K> <c-o>:pyf /usr/local/share/clang/clang-format.py<cr>
 map :gt :Gtags
 map <C-f> :Files<CR>
 map <C-o> :NERDTreeToggle<CR>
+
+" Airline status.
+let g:airline_theme = 'simple'
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Workaround Nerdtree bug.
 let g:NERDTreeNodeDelimiter = "\u00a0"
