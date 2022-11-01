@@ -22,10 +22,12 @@ Plug 'vim-scripts/gtags.vim'
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'flazz/vim-colorschemes'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'bazelbuild/vim-ft-bzl'
+Plug 'tomasr/molokai'
 
 call plug#end()
 
@@ -78,9 +80,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:NERDTreeNodeDelimiter = "\u00a0"
 
 " Vim-go Settings.
-let g:go_def_mode = 'godef'
+let g:go_def_mode = 'gopls'
+let g:go_info_mode = 'gopls'
 let g:go_fmt_command = "goimports"
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_methods = 1
